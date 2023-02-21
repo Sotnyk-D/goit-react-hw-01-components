@@ -23,9 +23,10 @@ const Statistics = ({ title, stats }) => (
   </section>
 );
 
-Statistics.PropTypes = {
+
+Statistics.propTypes = {
   title: PropTypes.string,
-  stats: PropTypes.arrayOf(
+  stats: PropTypes.PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string,
       label: PropTypes.string,
@@ -33,5 +34,4 @@ Statistics.PropTypes = {
     })
   ),
 };
-
 export default Statistics;
